@@ -1,6 +1,9 @@
-# Eclipse-Data-Tool
-Overview
-The eclipse data tool is a set of JavaScript files and an HTML page that allows the user to get data for a particular eclipse at different locations. The HTML page allows the user to select an eclipse date and upload a CSV file containing location data (either coordinates or zip codes) and it outputs a CSV file with the eclipse data for each location. 
+# Eclipse Phase Timing Tool
+## Overview
+The Eclipse Phase Timing Tool is a set of JavaScript files and an HTML page that allows the user to get data for a particular eclipse at different locations. The HTML page allows the user to select an eclipse date and upload a CSV file containing location data (either coordinates or zip codes) and it outputs a CSV file with the eclipse data for each location. 
+
+## Description:
+A software utility developed by Eclipse Soundscapes to generate accurate eclipse phase timing data (start of eclipse, maximum start, maximum end, end of total/annular/partial eclipse) for any latitude/longitude input. The tool ingests detailed NASA-generated path prediction datasets, translating them into structured, location-specific timing data. Originally developed to support the scientific research done on the effects of the eclipse on wildlife that is supported by ES. The EPTT takes a .csv spreadsheet as input (with either latitude and longitude, or ZIP code information) and calculates detailed information about the timings of each eclipse phase at the locations given in .csv spreadsheet format. This tool has been updated utilizing NASA datasets through the 2024 total solar eclipse. Additional, but minor work would be needed to utilize this for future eclipses.
 
 
 The eclipse data that is returned includes the following:
@@ -16,7 +19,7 @@ The eclipse data that is returned includes the following:
 * Longitude [Input] (Observation latitude which provides timings above.)
 * Zip Code  [Input] (if the selected upload option is Zip Codes)
 
-How To Use
+## How To Use
 1. Download or clone the repository locally from: https://github.com/ARISA-Lab-LLC/Eclipse-Data-Tool.
 2. If downloaded directly from GitHub, unzip the folder to the desired location on your system
 3. Open the convert.js file using a text editor and replace the API_KEY placeholder in the retrieveCoordinateFromZipCode function with an actual Google Geocoding API key (line 147). Without this change the option to get eclipse data from zip codes will always raise an error. (https://developers.google.com/maps/documentation/geolocation/overview)
@@ -26,13 +29,13 @@ How To Use
 7. Click the “Upload CSV File” button to choose a CSV file to upload from your local system
 8. Click “Download Processed CSV” to download the result
 
-Things to note:
+## Things to note:
 * Steps 1-3 only need to be done once when the project is copied locally. 
 * Make sure that you can run java scripts on the computer where this is running.   
 * If the uploaded CSV file does not contain the expected location data in its proper format, an error alert will be presented to the user indicating the issue.
 * You will need to add your own Google Geocoding API key to line 147 in convert.js and replace the API_KEY placeholder to use the ZIP Code Function.
 
-#Copyrights, Acknowledgements, and Atrributions
+## Copyrights, Acknowledgements, and Atrributions
 * Eclipse Data Credit: Eclipse map/figure/table/predictions courtesy of Fred Espenak, NASA/Goddard Space Flight Center, from eclipse.gsfc.nasa.gov.
 
 * Eclipse Soundscapes is an enterprise of ARISA Lab, LLC and is supported by NASA award No. 80NSSC21M0008. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Aeronautics and Space Administration.
